@@ -1,6 +1,6 @@
 # Professional Scientific Calculator
 
-![Calculator Screenshot](screenshot.png) <!-- Replace with actual screenshot if available -->
+
 
 A feature-rich, professional calculator with advanced scientific functions, memory operations, and a sleek modern UI.
 
@@ -101,9 +101,3 @@ Contributions are welcome! Here's how you can help:
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
-
-## Contact
-
-Your Name - [@yourtwitter](https://twitter.com/yourtwitter) - your.email@example.com
-
-Project Link: [https://github.com/yourusername/pro-calculator](https://github.com/yourusername/pro-calculator)
