@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro Scientific Calculator</title>
+	<link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="calculator">
+        <div class="display">
+            <div class="display-history" id="history"></div>
+            <input type="text" class="display-input" id="result" value="0" readonly>
+        </div>
+        
+        <div class="tabs">
+            <div class="tab active" data-tab="basic">Basic</div>
+            <div class="tab" data-tab="scientific">Scientific</div>
+            <div class="tab" data-tab="programmer">Programmer</div>
+        </div>
+        
+        <div class="panel basic-panel active" id="basic-panel">
+            <button class="button clear" onclick="clearDisplay()">AC</button>
+            <button class="button backspace" onclick="backspace()">⌫</button>
+            <button class="button function" onclick="percentage()">%</button>
+            <button class="button operator" onclick="appendOperator('/')">/</button>
+            
+            <button class="button" onclick="appendNumber('7')">7</button>
+            <button class="button" onclick="appendNumber('8')">8</button>
+            <button class="button" onclick="appendNumber('9')">9</button>
+            <button class="button operator" onclick="appendOperator('*')">×</button>
+            
+            <button class="button" onclick="appendNumber('4')">4</button>
+            <button class="button" onclick="appendNumber('5')">5</button>
+            <button class="button" onclick="appendNumber('6')">6</button>
+            <button class="button operator" onclick="appendOperator('-')">-</button>
+            
+            <button class="button" onclick="appendNumber('1')">1</button>
+            <button class="button" onclick="appendNumber('2')">2</button>
+            <button class="button" onclick="appendNumber('3')">3</button>
+            <button class="button operator" onclick="appendOperator('+')">+</button>
+            
+            <button class="button switch-btn" onclick="toggleSign()">±</button>
+            <button class="button" onclick="appendNumber('0')">0</button>
+            <button class="button" onclick="appendDecimal()">.</button>
+            <button class="button equals" onclick="calculate()">=</button>
+        </div>
+        
+        <div class="panel scientific-panel" id="scientific-panel">
+            <button class="button function" onclick="calculateFunction('sin')">sin</button>
+            <button class="button function" onclick="calculateFunction('cos')">cos</button>
+            <button class="button function" onclick="calculateFunction('tan')">tan</button>
+            <button class="button function" onclick="calculateFunction('log')">log</button>
+            <button class="button operator" onclick="appendOperator('/')">/</button>
+            
+            <button class="button function" onclick="calculateFunction('asin')">sin⁻¹</button>
+            <button class="button function" onclick="calculateFunction('acos')">cos⁻¹</button>
+            <button class="button function" onclick="calculateFunction('atan')">tan⁻¹</button>
+            <button class="button function" onclick="calculateFunction('ln')">ln</button>
+            <button class="button operator" onclick="appendOperator('*')">×</button>
+            
+            <button class="button function" onclick="calculateFunction('pi')">π</button>
+            <button class="button function" onclick="calculateFunction('e')">e</button>
+            <button class="button function" onclick="calculateFunction('pow')">x^y</button>
+            <button class="button function" onclick="calculateFunction('sqrt')">√</button>
+            <button class="button operator" onclick="appendOperator('-')">-</button>
+            
+            <button class="button function" onclick="calculateFunction('fact')">x!</button>
+            <button class="button function" onclick="calculateFunction('exp')">EXP</button>
+            <button class="button function" onclick="calculateFunction('mod')">MOD</button>
+            <button class="button function" onclick="calculateFunction('rand')">RAND</button>
+            <button class="button operator" onclick="appendOperator('+')">+</button>
+            
+            <button class="button memory-btn" onclick="memoryStore()">MS</button>
+            <button class="button memory-btn" onclick="memoryRecall()">MR</button>
+            <button class="button memory-btn" onclick="memoryClear()">MC</button>
+            <button class="button memory-btn" onclick="memoryAdd()">M+</button>
+            <button class="button equals" onclick="calculate()">=</button>
+            
+            <button class="button clear" onclick="clearDisplay()">AC</button>
+            <button class="button backspace" onclick="backspace()">⌫</button>
+            <button class="button function" onclick="percentage()">%</button>
+            <button class="button switch-btn" onclick="toggleSign()">±</button>
+            <button class="button" onclick="appendDecimal()">.</button>
+            
+            <button class="button" onclick="appendNumber('7')">7</button>
+            <button class="button" onclick="appendNumber('8')">8</button>
+            <button class="button" onclick="appendNumber('9')">9</button>
+            
+            <button class="button" onclick="appendNumber('4')">4</button>
+            <button class="button" onclick="appendNumber('5')">5</button>
+            <button class="button" onclick="appendNumber('6')">6</button>
+            
+            <button class="button" onclick="appendNumber('1')">1</button>
+            <button class="button" onclick="appendNumber('2')">2</button>
+            <button class="button" onclick="appendNumber('3')">3</button>
+            
+            <button class="button" onclick="appendNumber('0')">0</button>
+            <button class="button function" data-tooltip="Open parenthesis" onclick="appendOperator('(')">(</button>
+            <button class="button function" data-tooltip="Close parenthesis" onclick="appendOperator(')')">)</button>
+        </div>
+        
+        <div class="panel" id="programmer-panel">
+            <!-- Programmer mode would go here -->
+            <p style="text-align: center; padding: 20px; color: #95a5a6;">Programmer mode coming soon</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
